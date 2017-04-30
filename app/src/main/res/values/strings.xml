@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Prioritizer</string>
+    <string name="title_activity_item_set_details">ItemSet Details</string>
 </resources>

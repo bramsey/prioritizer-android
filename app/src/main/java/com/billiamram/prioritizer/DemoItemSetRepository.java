@@ -13,6 +13,7 @@ public class DemoItemSetRepository implements ItemSetRepository {
         this.itemSets = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             ItemSet itemSet = new ItemSet();
+            itemSet.id = String.valueOf(i);
             itemSet.name = "Set " + i;
             itemSets.add(itemSet);
         }
@@ -21,5 +22,13 @@ public class DemoItemSetRepository implements ItemSetRepository {
     @Override
     public List<ItemSet> findAll() {
         return itemSets;
+    }
+
+    @Override
+    public ItemSet findById(String id) {
+        for (ItemSet itemSet : itemSets) {
+            if (itemSet.id.equals(id)) return itemSet;
+        }
+        return null;
     }
 }
