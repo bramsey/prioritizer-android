@@ -9,5 +9,4 @@ public class ItemSetAdapter extends ArrayAdapter {
         super(context, R.layout.item_set_item);
     }
 
-
 }
